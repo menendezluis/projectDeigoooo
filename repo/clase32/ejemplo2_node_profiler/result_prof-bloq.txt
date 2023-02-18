@@ -1,0 +1,49 @@
+Statistical profiling result from bloq-v8.log, (5705 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   3220   56.4%          C:\Program Files\nodejs\node.exe
+   2484   43.5%          C:\WINDOWS\SYSTEM32\ntdll.dll
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      1    0.0%  100.0%  Function: ^popAsyncContext node:internal/async_hooks:553:25
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+      1    0.0%  100.0%  JavaScript
+      0    0.0%    0.0%  C++
+      6    0.1%  600.0%  GC
+   5704  100.0%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   3220   56.4%  C:\Program Files\nodejs\node.exe
+   3199   99.3%    C:\Program Files\nodejs\node.exe
+   3101   96.9%      Function: ^pbkdf2Sync node:internal/crypto/pbkdf2:68:20
+   3089   99.6%        Function: ^<anonymous> file:///F:/Mis%20documentos/Coder/Coder/repo/clase32/ejemplo2_node_profiler/src/main.js:38:23
+   3089  100.0%          Function: ^handle F:\Mis documentos\Coder\Coder\repo\clase32\ejemplo2_node_profiler\node_modules\express\lib\router\layer.js:86:49
+   3052   98.8%            Function: ^next F:\Mis documentos\Coder\Coder\repo\clase32\ejemplo2_node_profiler\node_modules\express\lib\router\route.js:116:16
+     37    1.2%            LazyCompile: ~next F:\Mis documentos\Coder\Coder\repo\clase32\ejemplo2_node_profiler\node_modules\express\lib\router\route.js:116:16
+     55    1.7%      LazyCompile: ~pbkdf2Sync node:internal/crypto/pbkdf2:68:20
+     49   89.1%        LazyCompile: ~<anonymous> file:///F:/Mis%20documentos/Coder/Coder/repo/clase32/ejemplo2_node_profiler/src/main.js:38:23
+     37   75.5%          Function: ^handle F:\Mis documentos\Coder\Coder\repo\clase32\ejemplo2_node_profiler\node_modules\express\lib\router\layer.js:86:49
+     37  100.0%            LazyCompile: ~next F:\Mis documentos\Coder\Coder\repo\clase32\ejemplo2_node_profiler\node_modules\express\lib\router\route.js:116:16
+     12   24.5%          LazyCompile: ~handle F:\Mis documentos\Coder\Coder\repo\clase32\ejemplo2_node_profiler\node_modules\express\lib\router\layer.js:86:49
+     12  100.0%            LazyCompile: ~next F:\Mis documentos\Coder\Coder\repo\clase32\ejemplo2_node_profiler\node_modules\express\lib\router\route.js:116:16
+      6   10.9%        LazyCompile: ~<anonymous> file:///F:/Mis%20documentos/Coder/Coder/repo/clase32/ejemplo2_node_profiler/src/main.js:19:22
+      6  100.0%          LazyCompile: ~handle F:\Mis documentos\Coder\Coder\repo\clase32\ejemplo2_node_profiler\node_modules\express\lib\router\layer.js:86:49
+      6  100.0%            LazyCompile: ~next F:\Mis documentos\Coder\Coder\repo\clase32\ejemplo2_node_profiler\node_modules\express\lib\router\route.js:116:16
+
+   2484   43.5%  C:\WINDOWS\SYSTEM32\ntdll.dll
+

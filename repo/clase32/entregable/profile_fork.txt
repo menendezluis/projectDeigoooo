@@ -1,0 +1,288 @@
+Statistical profiling result from fork-v8.log, (1553 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   1465   94.3%          C:\WINDOWS\SYSTEM32\ntdll.dll
+     84    5.4%          C:\Program Files\nodejs\node.exe
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      1    0.1%   25.0%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+      1    0.1%   25.0%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      1    0.1%   25.0%  LazyCompile: *resolve node:path:158:10
+      1    0.1%   25.0%  Function: ^Module._nodeModulePaths node:internal/modules/cjs/loader:669:37
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+      4    0.3%  100.0%  JavaScript
+      0    0.0%    0.0%  C++
+      4    0.3%  100.0%  GC
+   1549   99.7%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   1465   94.3%  C:\WINDOWS\SYSTEM32\ntdll.dll
+
+     84    5.4%  C:\Program Files\nodejs\node.exe
+     52   61.9%    C:\Program Files\nodejs\node.exe
+      5    9.6%      Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1   20.0%        LazyCompile: ~initializeReport node:internal/process/pre_execution:333:26
+      1  100.0%          LazyCompile: ~prepareExecution node:internal/process/pre_execution:51:26
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:35:36
+      1   20.0%        LazyCompile: ~initializeCJSLoader node:internal/process/pre_execution:557:29
+      1  100.0%          LazyCompile: ~setupUserModules node:internal/process/pre_execution:120:26
+      1  100.0%            LazyCompile: ~prepareExecution node:internal/process/pre_execution:51:26
+      1   20.0%        Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      1  100.0%          Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1  100.0%            Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      1   20.0%        Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      1  100.0%          Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      1   20.0%        Function: ~<anonymous> node:internal/modules/esm/get_format:1:1
+      1  100.0%          Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/resolve:1:1
+      5    9.6%      Function: ^internalCompileFunction node:internal/vm:30:33
+      5  100.0%        Function: ^wrapSafe node:internal/modules/cjs/loader:1117:18
+      5  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1173:37
+      4   80.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1   20.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      4    7.7%      Function: ^stat node:internal/modules/cjs/loader:161:14
+      3   75.0%        Function: ^tryFile node:internal/modules/cjs/loader:440:17
+      3  100.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:456:23
+      2   66.7%            Function: ^Module._findPath node:internal/modules/cjs/loader:555:28
+      1   33.3%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:555:28
+      1   25.0%        Function: ^Module._findPath node:internal/modules/cjs/loader:555:28
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:948:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:851:24
+      4    7.7%      Function: ^compression F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\compression\index.js:59:31
+      4  100.0%        Function: ^handle F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\layer.js:86:49
+      4  100.0%          Function: ^trim_prefix F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\index.js:293:23
+      3   75.0%            LazyCompile: *next F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\index.js:177:16
+      1   25.0%            Function: ^<anonymous> F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\index.js:280:64
+      3    5.8%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      2   66.7%        Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1   50.0%          Function: ~<anonymous> node:internal/cluster/primary:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      1   50.0%          Function: ~<anonymous> node:http:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      1   33.3%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:264:25
+      1  100.0%          LazyCompile: ~loadBuiltinModule node:internal/modules/cjs/helpers:45:27
+      1  100.0%            LazyCompile: ~builtinStrategy node:internal/modules/esm/translators:253:58
+      3    5.8%      C:\Program Files\nodejs\node.exe
+      1   33.3%        LazyCompile: ~parse F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\content-type\index.js:106:16
+      1  100.0%          LazyCompile: ~setCharset F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\utils.js:248:41
+      1  100.0%            LazyCompile: ~send F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\response.js:111:25
+      1   33.3%        Function: ~<anonymous> F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\log4js\node_modules\debug\src\node.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1173:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1   33.3%        Function: ^match F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\layer.js:110:39
+      1  100.0%          Function: ^matchLayer F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\index.js:583:20
+      1  100.0%            Function: ^next F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\index.js:177:16
+      2    3.8%      Function: ^tryStatSync node:fs:419:21
+      2  100.0%        Function: ^readFileSync node:fs:465:22
+      1   50.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1069:33
+      1   50.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1069:33
+      2    3.8%      Function: ^setWriteHeadHeaders F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\on-headers\index.js:105:30
+      2  100.0%        Function: ^writeHead F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\on-headers\index.js:28:29
+      2  100.0%          Function: ^_implicitHeader node:_http_server:333:68
+      2  100.0%            Function: ^end F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\compression\index.js:92:28
+      2    3.8%      Function: ^Hash node:internal/crypto/hash:62:14
+      2  100.0%        Function: ^createHash node:crypto:132:20
+      2  100.0%          Function: ^entitytag F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\etag\index.js:39:20
+      2  100.0%            Function: ^etag F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\etag\index.js:70:15
+      1    1.9%      LazyCompile: ~setInterval node:timers:210:21
+      1  100.0%        LazyCompile: ~setupConnectionsTracking node:_http_server:478:34
+      1  100.0%          LazyCompile: ~Server node:_http_server:488:16
+      1  100.0%            LazyCompile: ~createServer node:http:59:22
+      1    1.9%      LazyCompile: ~getConstructorName node:internal/util/inspect:588:28
+      1  100.0%        LazyCompile: ~formatRaw node:internal/util/inspect:844:19
+      1  100.0%          LazyCompile: ~formatValue node:internal/util/inspect:766:21
+      1  100.0%            LazyCompile: ~formatProperty node:internal/util/inspect:1911:24
+      1    1.9%      LazyCompile: ~getCLIOptionsFromBinding node:internal/options:18:34
+      1  100.0%        LazyCompile: ~getOptionValue node:internal/options:44:24
+      1  100.0%          LazyCompile: ~patchProcessObject node:internal/process/pre_execution:134:28
+      1  100.0%            LazyCompile: ~prepareExecution node:internal/process/pre_execution:51:26
+      1    1.9%      LazyCompile: ~fastparse F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\parseurl\index.js:95:20
+      1  100.0%        LazyCompile: ~parseurl F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\parseurl\index.js:35:19
+      1  100.0%          LazyCompile: ~getPathname F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\index.js:537:21
+      1  100.0%            LazyCompile: ~next F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\index.js:177:16
+      1    1.9%      LazyCompile: ~createDebug F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\debug\src\debug.js:63:21
+      1  100.0%        Function: ~<anonymous> F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\finalhandler\index.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1173:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1    1.9%      LazyCompile: ~configure F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\log4js\lib\log4js.js:59:19
+      1  100.0%        Script: ~<anonymous> file:///F:/Mis%20documentos/Coder/Coder/repo/clase32/entregable/src/main.js:1:1
+      1  100.0%          C:\Program Files\nodejs\node.exe
+      1  100.0%            C:\Program Files\nodejs\node.exe
+      1    1.9%      LazyCompile: ~allocate node:buffer:407:18
+      1  100.0%        LazyCompile: ~allocUnsafe node:buffer:382:42
+      1  100.0%          LazyCompile: ~tryCreateBuffer node:fs:429:25
+      1  100.0%            LazyCompile: ~readFileSync node:fs:465:22
+      1    1.9%      LazyCompile: ~Socket._destroy node:net:770:37
+      1  100.0%        Function: ^_destroy node:internal/streams/destroy:77:18
+      1  100.0%          Function: ^destroy node:internal/streams/destroy:39:17
+      1  100.0%            LazyCompile: ~finish node:internal/streams/writable:739:16
+      1    1.9%      LazyCompile: ~Module.load node:internal/modules/cjs/loader:1069:33
+      1  100.0%        LazyCompile: ~Module._load node:internal/modules/cjs/loader:851:24
+      1  100.0%          LazyCompile: ~<anonymous> node:internal/modules/esm/translators:160:67
+      1  100.0%            C:\Program Files\nodejs\node.exe
+      1    1.9%      LazyCompile: ~<anonymous> file:///F:/Mis%20documentos/Coder/Coder/repo/clase32/entregable/src/main.js:69:29
+      1  100.0%        LazyCompile: ~handle F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%          LazyCompile: ~next F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\route.js:116:16
+      1  100.0%            LazyCompile: ~dispatch F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\route.js:98:45
+      1    1.9%      Function: ~<anonymous> F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\call-bind\index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1173:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1069:33
+      1    1.9%      Function: ^writevGeneric node:internal/stream_base_commons:122:23
+      1  100.0%        Function: ^Socket._writeGeneric node:net:897:42
+      1  100.0%          Function: ^Socket._writev node:net:929:36
+      1  100.0%            Function: ^doWrite node:internal/streams/writable:401:17
+      1    1.9%      Function: ^send F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\response.js:111:25
+      1  100.0%        Function: ^<anonymous> file:///F:/Mis%20documentos/Coder/Coder/repo/clase32/entregable/src/main.js:69:29
+      1  100.0%          Function: ^handle F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%            Function: ^next F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\route.js:116:16
+      1    1.9%      Function: ^removeAllListeners node:events:735:32
+      1  100.0%        Function: ^Readable.removeAllListeners node:internal/streams/readable:934:49
+      1  100.0%          Function: ^_dump node:_http_incoming:422:49
+      1  100.0%            Function: ^resOnFinish node:_http_server:907:21
+      1    1.9%      Function: ^realpathSync node:fs:2474:22
+      1  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:449:20
+      1  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:440:17
+      1  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:456:23
+      1    1.9%      Function: ^openSync node:fs:591:18
+      1  100.0%        Function: ^readFileSync node:fs:465:22
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1069:33
+      1    1.9%      Function: ^nextTick node:internal/process/task_queues:103:18
+      1  100.0%        Function: ^endReadable node:internal/streams/readable:1342:21
+      1  100.0%          Function: ^Readable.read node:internal/streams/readable:402:35
+      1  100.0%            Function: ^resume_ node:internal/streams/readable:996:17
+      1    1.9%      Function: ^expressInit F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\middleware\init.js:29:30
+      1  100.0%        Function: ^handle F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%          Function: ^trim_prefix F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\index.js:293:23
+      1  100.0%            Function: ^<anonymous> F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\index.js:280:64
+      1    1.9%      Function: ^canBeRequiredWithoutScheme node:internal/bootstrap/loaders:255:36
+      1  100.0%        Function: ^Module._load node:internal/modules/cjs/loader:851:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:1097:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:102:31
+      1    1.9%      Function: ^_destroy node:internal/streams/destroy:77:18
+      1  100.0%        Function: ^destroy node:internal/streams/destroy:39:17
+      1  100.0%          Function: ^endReadableNT node:internal/streams/readable:1352:23
+      1  100.0%            LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      1    1.9%      Function: ^FastBuffer node:internal/buffer:960:14
+      1  100.0%        Function: ^fromStringFast node:buffer:422:24
+      1  100.0%          Function: ^fromString node:buffer:441:20
+      1  100.0%            Function: ^from node:buffer:305:28
+      1    1.9%      Function: ^<anonymous> file:///F:/Mis%20documentos/Coder/Coder/repo/clase32/entregable/src/main.js:69:29
+      1  100.0%        Function: ^handle F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%          Function: ^next F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\route.js:116:16
+      1  100.0%            Function: ^dispatch F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\route.js:98:45
+      2    2.4%    Function: ^toNamespacedPath node:path:618:19
+      1   50.0%      LazyCompile: ~realpathSync node:fs:2474:22
+      1  100.0%        LazyCompile: ~finalizeResolution node:internal/modules/esm/resolve:290:28
+      1  100.0%          LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:923:23
+      1  100.0%            LazyCompile: ~defaultResolve node:internal/modules/esm/resolve:1063:30
+      1   50.0%      Function: ^stat node:internal/modules/cjs/loader:161:14
+      1  100.0%        Function: ^tryFile node:internal/modules/cjs/loader:440:17
+      1  100.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:456:23
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:555:28
+      2    2.4%    Function: ^popAsyncContext node:internal/async_hooks:553:25
+      2  100.0%      Function: ^emitAfterScript node:internal/async_hooks:517:25
+      2  100.0%        Function: ^processTicksAndRejections node:internal/process/task_queues:67:35
+      1    1.2%    LazyCompile: ~listOnTimeout node:internal/timers:512:25
+      1  100.0%      LazyCompile: ~processTimers node:internal/timers:492:25
+      1    1.2%    LazyCompile: ~Mime.define F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\mime\mime.js:21:34
+      1  100.0%      Function: ~<anonymous> F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\mime\mime.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1173:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1069:33
+      1    1.2%    LazyCompile: *setHeader node:_http_outgoing:661:57
+      1  100.0%      Function: ^vary F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\vary\index.js:133:15
+      1  100.0%        Function: ^onResponseHeaders F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\compression\index.js:140:47
+      1  100.0%          Function: ^writeHead F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\on-headers\index.js:28:29
+      1  100.0%            Function: ^_implicitHeader node:_http_server:333:68
+      1    1.2%    LazyCompile: *nextTick node:internal/process/task_queues:103:18
+      1  100.0%      Function: ^resOnFinish node:_http_server:907:21
+      1  100.0%        Function: ^emit node:events:460:44
+      1  100.0%          Function: ^onFinish node:_http_outgoing:967:18
+      1  100.0%            Function: ^callback node:internal/streams/writable:553:44
+      1    1.2%    Function: ^writeHead F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\on-headers\index.js:28:29
+      1  100.0%      Function: ^_implicitHeader node:_http_server:333:68
+      1  100.0%        Function: ^end F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\compression\index.js:92:28
+      1  100.0%          Function: ^send F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\response.js:111:25
+      1  100.0%            Function: ^<anonymous> file:///F:/Mis%20documentos/Coder/Coder/repo/clase32/entregable/src/main.js:69:29
+      1    1.2%    Function: ^syncExports node:internal/bootstrap/loaders:307:14
+      1  100.0%      LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:264:25
+      1  100.0%        Function: ^loadBuiltinModule node:internal/modules/cjs/helpers:45:27
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:851:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1097:36
+      1    1.2%    Function: ^send F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\response.js:111:25
+      1  100.0%      Function: ^<anonymous> file:///F:/Mis%20documentos/Coder/Coder/repo/clase32/entregable/src/main.js:69:29
+      1  100.0%        Function: ^handle F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%          Function: ^next F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\route.js:116:16
+      1  100.0%            Function: ^dispatch F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\route.js:98:45
+      1    1.2%    Function: ^processTicksAndRejections node:internal/process/task_queues:67:35
+      1    1.2%    Function: ^parserOnIncoming node:_http_server:965:26
+      1  100.0%      Function: ^parserOnHeadersComplete node:_http_common:72:33
+      1    1.2%    Function: ^onwrite node:internal/streams/writable:428:17
+      1  100.0%      Function: ^afterWriteDispatched node:internal/stream_base_commons:155:30
+      1  100.0%        Function: ^writevGeneric node:internal/stream_base_commons:122:23
+      1  100.0%          Function: ^Socket._writeGeneric node:net:897:42
+      1  100.0%            Function: ^Socket._writev node:net:929:36
+      1    1.2%    Function: ^normalize node:path:304:12
+      1  100.0%      Function: ^Module._findPath node:internal/modules/cjs/loader:555:28
+      1  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:948:35
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:851:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1097:36
+      1    1.2%    Function: ^matchHeader node:_http_outgoing:596:21
+      1  100.0%      Function: ^storeHeader node:_http_outgoing:589:21
+      1  100.0%        Function: ^processHeader node:_http_outgoing:570:23
+      1  100.0%          Function: ^_storeHeader node:_http_outgoing:439:22
+      1  100.0%            Function: ^writeHead node:_http_server:338:19
+      1    1.2%    Function: ^makeRequireFunction node:internal/modules/cjs/helpers:59:29
+      1  100.0%      Function: ^Module._compile node:internal/modules/cjs/loader:1173:37
+      1  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:1069:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:851:24
+      1    1.2%    Function: ^handle F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%      Function: ^trim_prefix F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\index.js:293:23
+      1  100.0%        LazyCompile: *next F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\index.js:177:16
+      1  100.0%          Function: ^query F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\middleware\query.js:39:24
+      1  100.0%            Function: ^handle F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\layer.js:86:49
+      1    1.2%    Function: ^get node:_http_incoming:112:16
+      1  100.0%      Function: ^parserOnIncoming node:_http_server:965:26
+      1  100.0%        Function: ^parserOnHeadersComplete node:_http_common:72:33
+      1    1.2%    Function: ^fromStringFast node:buffer:422:24
+      1  100.0%      LazyCompile: ~send F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\response.js:111:25
+      1  100.0%        LazyCompile: ~<anonymous> file:///F:/Mis%20documentos/Coder/Coder/repo/clase32/entregable/src/main.js:69:29
+      1  100.0%          Function: ^handle F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%            LazyCompile: ~next F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\router\route.js:116:16
+      1    1.2%    Function: ^emit node:events:460:44
+      1  100.0%      Function: ^parserOnIncoming node:_http_server:965:26
+      1  100.0%        Function: ^parserOnHeadersComplete node:_http_common:72:33
+      1    1.2%    Function: ^destroy node:internal/streams/destroy:39:17
+      1  100.0%      Function: ^endReadableNT node:internal/streams/readable:1352:23
+      1  100.0%        LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      1    1.2%    Function: ^createWriteWrap node:internal/stream_base_commons:109:25
+      1  100.0%      Function: ^writevGeneric node:internal/stream_base_commons:122:23
+      1  100.0%        Function: ^Socket._writeGeneric node:net:897:42
+      1  100.0%          Function: ^Socket._writev node:net:929:36
+      1  100.0%            Function: ^doWrite node:internal/streams/writable:401:17
+      1    1.2%    Function: ^_addHeaderLine node:_http_incoming:385:24
+      1  100.0%      Function: ^get node:_http_incoming:112:16
+      1  100.0%        Function: ^parserOnIncoming node:_http_server:965:26
+      1  100.0%          Function: ^parserOnHeadersComplete node:_http_common:72:33
+

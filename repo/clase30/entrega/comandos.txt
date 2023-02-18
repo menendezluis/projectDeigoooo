@@ -1,0 +1,18 @@
+nodemon {
+    nodemon server.js 8081 CLUSTER
+    nodemon server.js 8082
+    tasklist //fi "imagename eq node.exe" (doble barra para git bash)
+}
+forever {
+    forever server.js 8081 CLUSTER //nos ancla la consola
+    forever server.js 8082
+    forever list // listamos los procesos abiertos
+    tasklist //fi "imagename eq node.exe" (doble barra para git bash)
+}
+
+PM2 {
+    pm2 start server.js --name="Server_sincluster" --watch -- 8081 // 
+    pm2 start server.js --name="Server_concluster" --watch -i -- 8082
+    pm2 list // listo los servidores
+    tasklist //fi "imagename eq node.exe" (doble barra para git bash)
+}

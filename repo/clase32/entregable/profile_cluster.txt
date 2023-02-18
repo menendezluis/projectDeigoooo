@@ -1,0 +1,218 @@
+Statistical profiling result from cluster-v8.log, (2158 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   2085   96.6%          C:\WINDOWS\SYSTEM32\ntdll.dll
+     73    3.4%          C:\Program Files\nodejs\node.exe
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+      0    0.0%    NaN%  JavaScript
+      0    0.0%    NaN%  C++
+      2    0.1%  Infinity%  GC
+   2158  100.0%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   2085   96.6%  C:\WINDOWS\SYSTEM32\ntdll.dll
+
+     73    3.4%  C:\Program Files\nodejs\node.exe
+     68   93.2%    C:\Program Files\nodejs\node.exe
+     11   16.2%      Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      2   18.2%        LazyCompile: ~get BlockList node:net:2228:16
+      2  100.0%          Function: ~<anonymous> node:internal/modules/esm/fetch_module:1:1
+      2  100.0%            Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      2   18.2%        Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      2  100.0%          Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      2  100.0%            Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      2   18.2%        Function: ~<anonymous> node:internal/child_process:1:1
+      2  100.0%          Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      2  100.0%            Function: ~<anonymous> node:child_process:1:1
+      1    9.1%        LazyCompile: ~prepareExecution node:internal/process/pre_execution:51:26
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:35:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    9.1%        LazyCompile: ~initializeCJSLoader node:internal/process/pre_execution:557:29
+      1  100.0%          LazyCompile: ~setupUserModules node:internal/process/pre_execution:120:26
+      1  100.0%            LazyCompile: ~prepareExecution node:internal/process/pre_execution:51:26
+      1    9.1%        Function: ~<anonymous> node:internal/readline/interface:1:1
+      1  100.0%          Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1  100.0%            Function: ~<anonymous> node:internal/fs/promises:1:1
+      1    9.1%        Function: ~<anonymous> node:internal/modules/esm/module_map:1:1
+      1  100.0%          Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      1    9.1%        Function: ~<anonymous> node:internal/modules/esm/load:1:1
+      1  100.0%          Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+     11   16.2%      Function: ^internalCompileFunction node:internal/vm:30:33
+     10   90.9%        Function: ^wrapSafe node:internal/modules/cjs/loader:1117:18
+     10  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1173:37
+      9   90.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1   10.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1    9.1%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1117:18
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1173:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      7   10.3%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      4   57.1%        Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1   25.0%          LazyCompile: ~lazyWebCrypto node:crypto:125:23
+      1  100.0%            LazyCompile: ~get node:crypto:369:8
+      1   25.0%          Function: ~<anonymous> node:tty:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      1   25.0%          Function: ~<anonymous> node:assert:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      1   25.0%          Function: ~<anonymous> node:_http_client:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:319:27
+      2   28.6%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:264:25
+      2  100.0%          Function: ^loadBuiltinModule node:internal/modules/cjs/helpers:45:27
+      2  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:851:24
+      1   14.3%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:264:25
+      1  100.0%          LazyCompile: ~loadBuiltinModule node:internal/modules/cjs/helpers:45:27
+      1  100.0%            LazyCompile: ~builtinStrategy node:internal/modules/esm/translators:253:58
+      5    7.4%      Function: ^stat node:internal/modules/cjs/loader:161:14
+      3   60.0%        Function: ^Module._findPath node:internal/modules/cjs/loader:555:28
+      3  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:948:35
+      3  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:851:24
+      2   40.0%        Function: ^tryFile node:internal/modules/cjs/loader:440:17
+      2  100.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:456:23
+      2  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:555:28
+      3    4.4%      LazyCompile: ~isatty node:tty:42:16
+      2   66.7%        LazyCompile: ~useColors F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\debug\src\node.js:75:19
+      2  100.0%          LazyCompile: ~createDebug F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\debug\src\debug.js:63:21
+      1   50.0%            Function: ~<anonymous> F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\express\lib\view.js:1:1
+      1   50.0%            Function: ~<anonymous> F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\body-parser\lib\types\text.js:1:1
+      1   33.3%        LazyCompile: ~useColors F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\log4js\node_modules\debug\src\node.js:155:19
+      1  100.0%          LazyCompile: ~createDebug F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\log4js\node_modules\debug\src\common.js:60:22
+      1  100.0%            Function: ~<anonymous> F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\log4js\lib\log4js.js:1:1
+      2    2.9%      LazyCompile: ~prepareExecution node:internal/process/pre_execution:51:26
+      2  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:35:36
+      2  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2    2.9%      Function: ^realpathSync node:fs:2474:22
+      2  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:449:20
+      2  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:440:17
+      2  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:456:23
+      2    2.9%      Function: ^isatty node:tty:42:16
+      2  100.0%        LazyCompile: ~useColors F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\log4js\node_modules\debug\src\node.js:155:19
+      2  100.0%          LazyCompile: ~createDebug F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\log4js\node_modules\debug\src\common.js:60:22
+      1   50.0%            Function: ~<anonymous> F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\log4js\lib\appenders\recording.js:1:1
+      1   50.0%            Function: ~<anonymous> F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\log4js\lib\appenders\fileSync.js:1:1
+      2    2.9%      C:\Program Files\nodejs\node.exe
+      1   50.0%        LazyCompile: ~resolveExports node:internal/modules/cjs/loader:528:24
+      1  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:555:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:948:35
+      1   50.0%        Function: ^realpathSync node:fs:2474:22
+      1  100.0%          Function: ^toRealPath node:internal/modules/cjs/loader:449:20
+      1  100.0%            Function: ^tryFile node:internal/modules/cjs/loader:440:17
+      1    1.5%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:449:20
+      1  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:555:28
+      1  100.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:74:31
+      1    1.5%      LazyCompile: ~statSync node:fs:1588:18
+      1  100.0%        LazyCompile: ~tryStatSync node:internal/modules/esm/resolve:176:3
+      1  100.0%          LazyCompile: ~packageResolve node:internal/modules/esm/resolve:833:24
+      1  100.0%            LazyCompile: ~moduleResolve node:internal/modules/esm/resolve:923:23
+      1    1.5%      LazyCompile: ~packageExportsResolve node:internal/modules/esm/resolve:625:31
+      1  100.0%        Function: ^resolveExports node:internal/modules/cjs/loader:528:24
+      1  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:555:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:948:35
+      1    1.5%      LazyCompile: ~open node:internal/fs/promises:536:20
+      1  100.0%        LazyCompile: ~readFile node:internal/fs/promises:892:24
+      1  100.0%          LazyCompile: ~getSource node:internal/modules/esm/load:32:25
+      1  100.0%            LazyCompile: ~defaultLoad node:internal/modules/esm/load:72:27
+      1    1.5%      LazyCompile: ~moduleStrategy node:internal/modules/esm/translators:114:56
+      1  100.0%        LazyCompile: ~moduleProvider node:internal/modules/esm/loader:452:28
+      1  100.0%          C:\Program Files\nodejs\node.exe
+      1    1.5%      LazyCompile: ~internalCompileFunction node:internal/vm:30:33
+      1  100.0%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1117:18
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1173:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1    1.5%      LazyCompile: ~formatRaw node:internal/util/inspect:844:19
+      1  100.0%        LazyCompile: ~formatValue node:internal/util/inspect:766:21
+      1  100.0%          LazyCompile: ~inspect node:internal/util/inspect:310:17
+      1  100.0%            LazyCompile: ~createAppender F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\log4js\lib\appenders\index.js:74:24
+      1    1.5%      LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      1  100.0%        LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:168:19
+      1  100.0%          Function: ~<anonymous> F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\debug\src\node.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1173:37
+      1    1.5%      LazyCompile: ~_forkChild node:child_process:173:20
+      1  100.0%        LazyCompile: ~setupChildProcessIpcChannel node:internal/process/pre_execution:472:37
+      1  100.0%          LazyCompile: ~prepareExecution node:internal/process/pre_execution:51:26
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution node:internal/process/pre_execution:35:36
+      1    1.5%      LazyCompile: ~WriteStream node:tty:84:21
+      1  100.0%        LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      1  100.0%          LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:168:19
+      1  100.0%            Function: ~<anonymous> F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\debug\src\node.js:1:1
+      1    1.5%      LazyCompile: ~Socket node:net:336:16
+      1  100.0%        LazyCompile: ~WriteStream node:tty:84:21
+      1  100.0%          LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:45:35
+      1  100.0%            LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:168:19
+      1    1.5%      LazyCompile: ~Script node:vm:66:14
+      1  100.0%        LazyCompile: ~createScript node:vm:258:22
+      1  100.0%          LazyCompile: ~runInNewContext node:vm:294:25
+      1  100.0%            LazyCompile: ~getInternalGlobal node:internal/util:548:27
+      1    1.5%      LazyCompile: ~ModuleJob node:internal/modules/esm/module_job:54:14
+      1  100.0%        LazyCompile: ~#createModuleJob node:internal/modules/esm/loader:451:19
+      1  100.0%          LazyCompile: ~getModuleJob node:internal/modules/esm/loader:410:21
+      1  100.0%            C:\Program Files\nodejs\node.exe
+      1    1.5%      LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:948:35
+      1  100.0%        LazyCompile: ~<anonymous> node:internal/modules/esm/translators:232:36
+      1  100.0%          C:\Program Files\nodejs\node.exe
+      1  100.0%            LazyCompile: ~cjsPreparseModuleExports node:internal/modules/esm/translators:193:34
+      1    1.5%      LazyCompile: ~Mime.define F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\mime\mime.js:21:34
+      1  100.0%        Function: ~<anonymous> F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\mime\mime.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1173:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1    1.5%      LazyCompile: ~<anonymous> node:internal/modules/run_main:55:29
+      1  100.0%        LazyCompile: ~loadESM node:internal/process/esm_loader:88:41
+      1  100.0%          C:\Program Files\nodejs\node.exe
+      1  100.0%            C:\Program Files\nodejs\node.exe
+      1    1.5%      LazyCompile: ~<anonymous> F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\log4js\lib\configuration.js:51:21
+      1  100.0%        C:\Program Files\nodejs\node.exe
+      1  100.0%          LazyCompile: ~configure F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\log4js\lib\configuration.js:42:19
+      1  100.0%            LazyCompile: ~configure F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\log4js\lib\log4js.js:59:19
+      1    1.5%      LazyCompile: *normalizeString node:path:66:25
+      1  100.0%        Function: ^resolve node:path:158:10
+      1  100.0%          Function: ^readPackage node:internal/modules/cjs/loader:335:21
+      1  100.0%            LazyCompile: ~tryPackage node:internal/modules/cjs/loader:394:20
+      1    1.5%      Function: ~<anonymous> node:internal/modules/cjs/loader:1:1
+      1  100.0%        Function: ^requireBuiltin node:internal/bootstrap/loaders:356:24
+      1  100.0%          LazyCompile: ~initializeCJSLoader node:internal/process/pre_execution:557:29
+      1  100.0%            LazyCompile: ~setupUserModules node:internal/process/pre_execution:120:26
+      1    1.5%      Function: ~<anonymous> F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\streamroller\node_modules\debug\src\node.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1173:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1069:33
+      1    1.5%      Function: ~<anonymous> F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\get-intrinsic\index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1173:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1069:33
+      1    1.5%      Function: ^readPackage node:internal/modules/cjs/loader:335:21
+      1  100.0%        Function: ^resolveExports node:internal/modules/cjs/loader:528:24
+      1  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:555:28
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:948:35
+      1    1.5%      Function: ^closeSync node:fs:541:19
+      1  100.0%        Function: ^readFileSync node:fs:465:22
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:1069:33
+      1    1.4%    Function: ~<anonymous> F:\Mis documentos\Coder\Coder\repo\clase32\entregable\node_modules\log4js\lib\levels.js:1:1
+      1  100.0%      Function: ^Module._compile node:internal/modules/cjs/loader:1173:37
+      1  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1227:37
+      1  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:1069:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:851:24
+      1    1.4%    Function: ^toNamespacedPath node:path:618:19
+      1  100.0%      LazyCompile: ~open node:internal/fs/promises:536:20
+      1  100.0%        LazyCompile: ~readFile node:internal/fs/promises:892:24
+      1  100.0%          LazyCompile: ~getSource node:internal/modules/esm/load:32:25
+      1  100.0%            LazyCompile: ~defaultLoad node:internal/modules/esm/load:72:27
+

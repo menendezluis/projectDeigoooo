@@ -1,0 +1,21 @@
+<a href="/">Ir al formulario</a>
+<h2>Vista de productos</h2>
+{{#if productos.length}}
+  <table>
+    <tr>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Foto</th>
+    </tr>
+    {{#each productos}}
+      <tr>
+        <td> {{title}} </td>
+        <td> {{price}} </td>
+        <td> <img src= "{{thumbnail}}" alt=""></td>
+      </tr>
+    {{/each}}
+  </table>
+
+{{else}}
+  <h2>No hay productos.</h2>
+{{/if}}

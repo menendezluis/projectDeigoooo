@@ -1,0 +1,64 @@
+//creo la base de datos
+use ecommerce;
+//creo las collections
+db.createCollection('mensajes');
+db.createCollection('productos');
+//insertamos datos
+db.mensajes.insertMany([
+  {"email": "juan@gmail.com","text": "¡Hola! ¿Que tal?","time": "15/11/2022 05:21:58"},
+  {"email": "pedro@gmail.com", "text": "¡Muy bien! ¿Y vos?", "time": "15/11/2022 05:21:58"},
+  {"email": "ana@gmail.com","text": "¡Genial!", "time": "15/11/2022 05:21:58"},
+  {"email": "kevin_asf@hotmail.es", "text": "Hola txt", "time": "15/11/2022 05:28:26"},
+  {"email": "romina@gmail.com","text": "¡Hola! ¿Que tal?","time": "15/11/2022 05:21:58"},
+  {"email": "valeria@gmail.com", "text": "¡Muy bien! ¿Y vos?", "time": "15/11/2022 05:21:58"},
+  {"email": "carlos@gmail.com","text": "¡Genial!", "time": "15/11/2022 05:21:58"},
+  {"email": "eduardo@hotmail.es", "text": "Hola txt", "time": "15/11/2022 05:28:26"},
+  {"email": "jose@gmail.com","text": "¡Hola! ¿Que tal?","time": "15/11/2022 05:21:58"},
+  {"email": "pepe@gmail.com", "text": "¡Muy bien! ¿Y vos?", "time": "15/11/2022 05:21:58"}
+  ]);
+db.productos.insertMany([
+  {"title": "Escuadra","price": 120,"thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png"},
+  {"title": "Calculadora","price": 580,"thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png"},
+  {"title": "Globo Terráqueo","price": 900, "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png"},
+  {"title": "YT", "price": 1280,"thumbnail": "https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_youtube-64.png"},
+  {"title": "Compas","price": 1700,"thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png"},
+  {"title": "Cuaderno","price": 2300,"thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png"},
+  {"title": "Lapices","price": 2860, "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/globe-earth-geograhy-planet-school-256.png"},
+  {"title": "Cartuchera", "price": 3350,"thumbnail": "https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_youtube-64.png"},
+  {"title": "Regla","price": 4320,"thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png"},
+  {"title": "Portamina","price": 4990,"thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png"}
+]);
+
+//listamos los productos
+db.productos.find();
+
+//listamos los mensajes
+db.mensajes.find();
+
+//contamos la cantidad de documentos en mensajes y productos
+db.mensajes.countDocuments();
+db.productos.countDocuments();
+
+//5. a
+db.productos.insertOne({"title": "Carpeta","price": 1680,"thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png"});
+
+//b. I
+db.productos.find({price: {$lte:1000}});
+//b. II
+db.productos.find({ $and: [ { price: {$gte: 1000} }, { price: {$lte: 3000} } ] });
+//b. III
+db.productos.find({price: {$gte:3000}});
+//b. IV
+db.productos.find().sort({ price: 1 }).skip(2).limit(1);
+
+//c.
+db.productos.updateMany({}, { $inc: { stock: 100 } });
+
+//d.
+db.productos.updateMany({price: {$gte:4000}}, { $set: { stock: 0 } });
+
+//e.
+db.productos.deleteMany({ price: {$lte: 1000 } });
+
+//6.
+db.createUser({user:'pepe', pwd:'asd456', roles: [{role: "read", db: "ecommerce"}]});
